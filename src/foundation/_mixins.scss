@@ -55,7 +55,7 @@
 }
 
 @mixin padding-left($prop) {
-  padding-left: map-get($spacing, $prop);
+  padding-left: map.get($spacing, $prop);
 }
 
 .body {
