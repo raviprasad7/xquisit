@@ -1,0 +1,59 @@
+/* =============================================
+=            Foundation - Colors              =
+============================================= */
+
+/**
+ *
+ * This file defines the actual colors that will be used for styling. They will default to the palettes we defined in
+ * the _variable.scss file. This is our default palette, and consumers can override this with their own variables.
+ */
+
+/* =============================================
+=              Global text colors             =
+============================================= */
+
+$body-text-color: var(--xq-body-text-color, $dark) !default;
+$body-bg-color: var(--xq-body-bg-color, $white) !default;
+
+/* =============================================
+=                Button colors                =
+============================================= */
+$btn-primary-color: var(--xq-btn-primary-color, $white) !default;
+$btn-primary-bg: var(--xq-btn-primary-bg, $green) !default;
+$btn-primary-bg-hover: var(--xq-btn-primary-bg-hover, $green-light) !default;
+$btn-secondary-color: var(--xq-btn-secondary-color, $dark) !default;
+$btn-secondary-bg: var(--xq-btn-secondary-bg, $gray) !default;
+$btn-secondary-bg-hover: var(--xq-btn-secondary-bg-hover, $gray-light) !default;
+
+/* =============================================
+=                 Forms colors                =
+============================================= */
+$form-color: var(--xq-form-color, $dark) !default;
+$form-bg: var(--xq-form-bg, $white) !default;
+$form-error-color: var(--xq-form-error-color, $red) !default;
+$form-error-border: var(--xq-form-error-border, $red) !default;
+$form-border-focus-color: var(--xq-form-border-focus-color, $green) !default;
+
+/* =============================================
+=               App Bar Colors                =
+============================================= */
+$app-bar-primary-bg-color: var(--xq-app-bar-primary-bg-color, $violet) !default;
+$app-bar-primary-elevation-color: var(--xq-app-bar-primary-elevation-color, $black) !default;
+$app-bar-primary-font-color: var(--xq-app-bar-primary-font-color, $white) !default;
+$app-bar-secondary-bg-color: var(--xq-app-bar-secondary-bg-color, $white) !default;
+$app-bar-secondary-elevation-color: var(--xq-app-bar-secondary-elevation-color, $black) !default;
+$app-bar-secondary-font-color: var(--xq-app-bar-secondary-font-color, $black) !default;
+
+/* =============================================
+=                  FAB Colors                 =
+============================================= */
+$fab-primary-bg-color: var(--xq-fab-primary-bg-color, $violet) !default;
+$fab-primary-hover-color: var(--xq-fab-primary-hover-color, $violet-light-1) !default;
+$fab-primary-focus-color: var(--xq-fab-primary-focus-color, $violet-light-2) !default;
+$fab-primary-fill-color: var(--xq-fab-primary-fill-color, $white) !default;
+$fab-primary-elevation-color: var(--xq-fab-primary-elevation-color, $black) !default;
+$fab-secondary-bg-color: var(--xq-fab-secondary-bg-color, $teal) !default;
+$fab-secondary-hover-color: var(--xq-fab-secondary-hover-color, $teal-light-1) !default;
+$fab-secondary-focus-color: var(--xq-fab-secondary-focus-color, $teal-light-2) !default;
+$fab-secondary-fill-color: var(--xq-fab-secondary-fill-color, $white) !default;
+$fab-secondary-elevation-color: var(--xq-fab-secondary-elevation-color, $black) !default;

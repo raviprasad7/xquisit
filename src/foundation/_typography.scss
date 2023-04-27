@@ -1,0 +1,50 @@
+/* =============================================
+=           Foundation - Typography           =
+============================================= */
+
+/**
+ *
+ * This file defines the default font sizes to be used on headings and texts. The defaults come from the
+ * palette defined in _variables.scss and consumers can override this with their own variables.
+ */
+
+/* =============================================
+=               Body font family              =
+============================================= */
+$body-font-family: var(--xq-body-font-family, $roboto) !default;
+
+/* =============================================
+=               Body font sizes               =
+============================================= */
+$body-font-size: var(--xq-body-font-size, $fs-sm) !default;
+$body-font-weight: var(--xq-body-font-weight, $fw-normal) !default;
+
+/* =============================================
+=              Heading font sizes             =
+============================================= */
+$h1-font-size: var(--xq-h1-font-size, $fs-h1) !default;
+$h2-font-size: var(--xq-h2-font-size, $fs-h2) !default;
+$h3-font-size: var(--xq-h2-font-size, $fs-h3) !default;
+$h4-font-size: var(--xq-h2-font-size, $fs-h4) !default;
+$h5-font-size: var(--xq-h2-font-size, $fs-h5) !default;
+$h6-font-size: var(--xq-h2-font-size, $fs-h6) !default;
+
+/* =============================================
+=            Heading font weights            =
+============================================= */
+$h1-font-weight: var(--xq-h1-font-weight, $fw-light) !default;
+$h2-font-weight: var(--xq-h1-font-weight, $fw-light) !default;
+$h3-font-weight: var(--xq-h1-font-weight, $fw-normal) !default;
+$h4-font-weight: var(--xq-h1-font-weight, $fw-normal) !default;
+$h5-font-weight: var(--xq-h1-font-weight, $fw-normal) !default;
+$h6-font-weight: var(--xq-h1-font-weight, $fw-medium) !default;
+
+/* =============================================
+=            Heading line heights             =
+============================================= */
+$h1-line-height: var(--xq-h1-line-height, $lh-h1) !default;
+$h2-line-height: var(--xq-h1-line-height, $lh-h2) !default;
+$h3-line-height: var(--xq-h1-line-height, $lh-h3) !default;
+$h4-line-height: var(--xq-h1-line-height, $lh-h4) !default;
+$h5-line-height: var(--xq-h1-line-height, $lh-h5) !default;
+$h6-line-height: var(--xq-h1-line-height, $lh-h6) !default;
