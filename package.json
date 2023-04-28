@@ -1,38 +1,14 @@
 {
-  "name": "@xquisit/scss",
+  "name": "@xquisit/core",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "node src/scripts/build.js",
-    "lint-scss": "stylelint './**/*.scss'",
-    "lint-fix": "npm run lint-scss --fix",
-    "prepare": "husky install",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.scss": "npm run lint-fix"
-  },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "normalize-scss": "^7.0.1"
-  },
   "devDependencies": {
-    "husky": "^8.0.3",
-    "lint-staged": "^13.2.2",
-    "prettier": "^2.8.8",
-    "sass": "~1.32.1",
-    "stylelint": "^15.6.0",
-    "stylelint-config-prettier": "^9.0.5",
-    "stylelint-config-sass-guidelines": "^10.0.0",
-    "stylelint-config-standard-scss": "^9.0.0",
-    "stylelint-prettier": "^3.0.0"
-  }
+    "lerna": "^6.6.1"
+  },
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
 }
