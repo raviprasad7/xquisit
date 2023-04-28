@@ -136,7 +136,7 @@
   }
 }
 
-.xq-panel__container {
+.xq-panel-container {
   display: flex;
   position: absolute;
 }
