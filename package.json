@@ -5,7 +5,8 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "build": "npx lerna run build"
+    "build": "npx lerna run build",
+    "dev": "npx lerna run dev"
   },
   "devDependencies": {
     "lerna": "^6.6.1",

@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "rollup -c",
+    "dev": "nodemon --watch src --exec npm run build -e js,ts,jsx,tsx",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,6 +14,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/react": "^18.2.0",
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "nodemon": "^2.0.22"
   }
 }
