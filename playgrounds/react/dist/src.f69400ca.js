@@ -28863,7 +28863,28 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"../../../node_modules/react-dom/cjs/react-dom.development.js"}],"../../../node_modules/@xquisit/react/lib/atoms/Color/Color.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"../../../node_modules/react-dom/cjs/react-dom.development.js"}],"../../../node_modules/@xquisit/react/lib/foundation/Spacing.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+const spaces = {
+  xxxs: 'xxxs',
+  xxs: 'xxs',
+  xs: 'xs',
+  sm: 'sm',
+  md: 'md',
+  lg: 'lg',
+  xl: 'xl',
+  xxl: 'xx;',
+  xxxl: 'xxxl' // 96px
+};
+
+var Spacing = Object.freeze(spaces);
+exports.default = Spacing;
+},{}],"../../../node_modules/@xquisit/react/lib/atoms/Color/Color.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28871,13 +28892,16 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
+var _Spacing = _interopRequireDefault(require("../../foundation/Spacing.js"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 const Color = ({
   hexCode,
-  width,
-  height
+  width = _Spacing.default.sm,
+  height = _Spacing.default.sm
 }) => {
+  const className = `xq-width-${width} xq-height-${height}`;
   return _react.default.createElement("div", {
+    className: className,
     style: {
       backgroundColor: hexCode,
       width,
@@ -28886,7 +28910,7 @@ const Color = ({
   });
 };
 exports.default = Color;
-},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@xquisit/react/lib/index.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","../../foundation/Spacing.js":"../../../node_modules/@xquisit/react/lib/foundation/Spacing.js"}],"../../../node_modules/@xquisit/react/lib/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28898,9 +28922,16 @@ Object.defineProperty(exports, "Color", {
     return _Color.default;
   }
 });
+Object.defineProperty(exports, "Spacing", {
+  enumerable: true,
+  get: function () {
+    return _Spacing.default;
+  }
+});
 var _Color = _interopRequireDefault(require("./atoms/Color/Color.js"));
+var _Spacing = _interopRequireDefault(require("./foundation/Spacing.js"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./atoms/Color/Color.js":"../../../node_modules/@xquisit/react/lib/atoms/Color/Color.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"./atoms/Color/Color.js":"../../../node_modules/@xquisit/react/lib/atoms/Color/Color.js","./foundation/Spacing.js":"../../../node_modules/@xquisit/react/lib/foundation/Spacing.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -28957,6 +28988,12 @@ module.exports = reloadCSS;
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@xquisit/scss/lib/Utilities.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
 },{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.tsx":[function(require,module,exports) {
 "use strict";
 
@@ -28964,13 +29001,14 @@ var _react = _interopRequireDefault(require("react"));
 var _reactDom = _interopRequireDefault(require("react-dom"));
 var _react2 = require("@xquisit/react");
 require("@xquisit/scss/lib/Button.css");
+require("@xquisit/scss/lib/Utilities.css");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 _reactDom.default.render(_react.default.createElement(_react2.Color, {
   hexCode: '#000',
-  width: '1rem',
-  height: '1rem'
+  width: 'xxxl',
+  height: 'xxxl'
 }), document.getElementById('root'));
-},{"react":"../../../node_modules/react/index.js","react-dom":"../../../node_modules/react-dom/index.js","@xquisit/react":"../../../node_modules/@xquisit/react/lib/index.js","@xquisit/scss/lib/Button.css":"../../../node_modules/@xquisit/scss/lib/Button.css"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","react-dom":"../../../node_modules/react-dom/index.js","@xquisit/react":"../../../node_modules/@xquisit/react/lib/index.js","@xquisit/scss/lib/Button.css":"../../../node_modules/@xquisit/scss/lib/Button.css","@xquisit/scss/lib/Utilities.css":"../../../node_modules/@xquisit/scss/lib/Utilities.css"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -28995,7 +29033,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65202" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61800" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
