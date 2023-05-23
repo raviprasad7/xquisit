@@ -1,5 +1,5 @@
 import React from 'react';
-import Spacing from '../../foundation/Spacing';
+import { Spacing } from '@xquisit/foundation';
 
 import '@xquisit/scss/lib/Image.css';
 
