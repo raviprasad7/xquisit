@@ -13,5 +13,5 @@ export default {
     preserveModules: true,
   },
   plugins: [Ts()],
-  external: ['react', '@xquisit/scss'],
+  external: ['react', '@xquisit/scss', '@xquisit/foundation'],
 };
