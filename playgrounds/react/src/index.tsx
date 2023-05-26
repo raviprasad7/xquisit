@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { Color, Image } from '@xquisit/react';
+import { Color, Image, Margin } from '@xquisit/react';
 
 const App: React.FC = () => {
   return (
@@ -11,7 +11,9 @@ const App: React.FC = () => {
         width='xxxl'
         height='xxxl'
       />
-      <Color hexCode='#123321' width='xxxl' height='xxxl' />
+      <Margin space='xxxs'>
+        <Color hexCode='#123321' width='xxxl' height='xxxl' />
+      </Margin>
     </div>
   );
 };
