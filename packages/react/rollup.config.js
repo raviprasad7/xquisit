@@ -1,4 +1,8 @@
 import Ts from 'rollup-plugin-typescript2';
+import { globSync } from 'glob';
+
+const externalCSSFiles = globSync('@xquisit/scss/lib/*.css');
+console.log('externalCSSFiles: ', externalCSSFiles);
 
 export default {
   input: [
@@ -14,5 +18,5 @@ export default {
     preserveModules: true,
   },
   plugins: [Ts()],
-  external: ['react', '@xquisit/scss', '@xquisit/foundation'],
+  external: ['react', '@xquisit/foundation', ...externalCSSFiles],
 };

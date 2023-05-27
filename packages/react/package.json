@@ -12,9 +12,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "@xquisit/foundation": "1.0.0",
+    "@xquisit/scss": "1.0.0",
+    "glob": "^10.2.6"
+  },
   "devDependencies": {
     "@types/react": "^18.2.0",
-    "react": "^18.2.0",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "react": "^18.2.0"
   }
 }
