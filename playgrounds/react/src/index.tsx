@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { Color, Image, Margin } from '@xquisit/react';
+import { Color, Image, Margin, Select } from '@xquisit/react';
 
 const App: React.FC = () => {
   return (
@@ -14,6 +14,7 @@ const App: React.FC = () => {
       <Margin space='xxxs'>
         <Color hexCode='#123321' width='xxxl' height='xxxl' />
       </Margin>
+      <Select />
     </div>
   );
 };
